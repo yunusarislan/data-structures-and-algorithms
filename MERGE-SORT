@@ -1,0 +1,21 @@
+Merge Sort for [16,21,11,8,12,22] 
+
+  - First divide the given array into two equal halves => [16,21,11] <-----> [8,12,22]
+
+  - [16,21,11] <-----> [8,12,22] => Now divide these two arrays in half again. Since their size is 3, split them into new arrays of size 1 and 2. =>  
+    [16, 21] <-----> [11] <-----> [8] <-----> [12,22]
+
+  - [16, 21] <-----> [11] <-----> [8] <-----> [12,22] => Now, again divide these arrays to get the atomic value that cannot be further divided. =>
+    [16] <-----> [21] <----->  [11] <----->  [8] <-----> [12] <-----> [22] 
+
+  - Now, combine them in the same manner they were broken. In combining, first compare the element of each array and then combine them into another array in sorted order.
+  [11, 16, 21] <-----> [8, 12, 22] => MERGE
+
+  - An again
+  [8, 11, 12, 16, 21, 22] => MERGE
+
+Big-O Notation
+
+  -Since it is halved each time, if 2^x = n then x= logn. Additionally, each transaction is performed logn times. Therefore =>
+  Big-O = O(nlogn)
+
